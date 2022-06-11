@@ -473,8 +473,8 @@ void loop() {
 
   if (rad1PlussVal == HIGH){
     delay(200);
-    if (antLysPaaRad1 >= 0 && antLysPaaRad1 < 5){                                                   //Sjekker hvor mange lys som er på, hvis ikke alle lysene er på vil systemet gå videre for å skru på neste lys                                                                             //Øker telleren med 1
-      antLysPaaRad1 ++; 
+    if (antLysPaaRad1 >= 0 && antLysPaaRad1 < 5){                                                   //Sjekker hvor mange lys som er på, hvis ikke alle lysene er på vil systemet gå videre for å skru på neste lys                                                                             
+      antLysPaaRad1 ++;                                                                             //Øker telleren med 1
       EEPROM.update(lagringsPlass1, antLysPaaRad1);                                                 //Oppdaterer lagringsplassen i EEPROM med den nye antLysPaaRad1 veriden
       pluss(lysRad1, antLysPaaRad1);                                                                //Henter pluss() funksjonen med lysene og lysenes rad som parametre for å skru på det neste lyset i rekken
     }
